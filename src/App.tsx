@@ -1,15 +1,21 @@
+import '@src/languages';
 import React from 'react';
 
-import { View } from 'react-native';
+import { useTranslation } from 'react-i18next';
+import { Text, View } from 'react-native';
 
 import Theme from './theme';
 
-const src: React.FC = () => {
+const App: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <Theme>
-      <View />
+      <View>
+        <Text>{t('REGION')}</Text>
+      </View>
     </Theme>
   );
 };
 
-export default src;
+export default App;
