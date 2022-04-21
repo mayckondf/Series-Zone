@@ -1,17 +1,14 @@
 import React from 'react';
 
 import Logo from '@src/assets/svgs/logo.svg';
-import { useTranslation } from 'react-i18next';
-import { Text, View } from 'react-native';
+
+import { Container } from './styles';
 
 const SignIn: React.FC = () => {
-  const { t } = useTranslation();
-
   return (
-    <View>
-      <Text>{t('REGION')}</Text>
+    <Container>
       <Logo />
-    </View>
+    </Container>
   );
 };
 

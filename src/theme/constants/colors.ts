@@ -16,4 +16,11 @@ export const colors = {
     negative: '#',
     warning: '#',
   },
+  gradients: {
+    g1: {
+      colors: ['#F1C385', '#EFA509'],
+      start: { x: 1, y: 0 },
+      end: { x: 0, y: 1 },
+    },
+  },
 };
