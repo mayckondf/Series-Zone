@@ -12,8 +12,8 @@ export const theme = {
   sizes,
 } as const;
 
-const Theme: React.FC = () => {
-  return <ThemeProvider theme={theme} />;
+const Theme: React.FC = props => {
+  return <ThemeProvider theme={theme} {...props} />;
 };
 
 export default Theme;
