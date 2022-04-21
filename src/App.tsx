@@ -1,4 +1,5 @@
 import '@src/languages';
+import '@src/config/reactotron';
 import React from 'react';
 
 import { Provider } from 'react-redux';
