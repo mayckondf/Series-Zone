@@ -12,6 +12,10 @@
       "TITLE": "Let's get started! 👋"
     },
     "APP_NAME": "Series Zone",
-    "SLOGAN": "Don't miss anything about your favorite serie."
+    "SLOGAN": "Don't miss anything about your favorite serie.",
+    "COUNTRY": "US",
+    "HOME": {
+      "TITLE": "All Shows"
+    }
   }
 }
