@@ -5,7 +5,7 @@ import { persistReducers } from './persistReducer';
 import reducers from './reducers';
 
 const store = configureStore({
-  reducer: persistReducers(reducers),
+  reducer: persistReducers(reducers) as typeof reducers,
   devTools: process.env.NODE_ENV !== 'production',
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

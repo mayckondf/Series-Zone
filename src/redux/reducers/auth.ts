@@ -3,18 +3,21 @@ import { User } from '@src/types/app/User';
 
 import { AuthStore } from '../types';
 
-const initialState: AuthStore = {};
+const initialState: AuthStore = {
+  users: [],
+};
 
 export const authSlice = createSlice({
   name: 'auth',
   initialState: initialState,
   reducers: {
-    setUser: (state, action: PayloadAction<User>) => {
-      state.user = action.payload;
+    registerUser: (state, action: PayloadAction<User>) => {
+      state.users.push(action.payload);
+      state.currentUser = action.payload;
     },
   },
 });
 
-export const { setUser } = authSlice.actions;
+export const { registerUser } = authSlice.actions;
 
 export default authSlice.reducer;

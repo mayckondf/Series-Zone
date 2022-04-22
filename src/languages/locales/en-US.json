@@ -1,8 +1,17 @@
 {
-  "error": {
-  },
+  "error": {},
   "translation": {
     "REGION": "EN",
-    "REGION_MASK": "en-US"
+    "REGION_MASK": "en-US",
+    "SIGN_UP": {
+      "INPUT": {
+        "PLACEHOLDER": "How can we call you? type here."
+      },
+      "BUTTON": "Continue",
+      "SUBTITLE": "We gonna create an account for you to track your favorite series.",
+      "TITLE": "Let's get started! 👋"
+    },
+    "APP_NAME": "Series Zone",
+    "SLOGAN": "Don't miss anything about your favorite serie."
   }
 }
