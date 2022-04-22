@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { useAppSelector } from '@src/redux/hooks';
 import { registerUser } from '@src/redux/reducers/auth';
-import { routeNames } from '@src/routes/routes';
 import { NICKNAME_MIN_LENGTH } from '@src/utils/constants';
 import { useDispatch } from 'react-redux';
 
@@ -32,7 +31,7 @@ const SignUp: React.FC = () => {
   }, [nickname]);
 
   useEffect(() => {
-    if (currentUser) navigation.navigate('Home');
+    if (currentUser) navigation.navigate('Signed');
   }, [currentUser]);
 
   return (

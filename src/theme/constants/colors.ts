@@ -3,6 +3,7 @@ export const colors = {
   secondary: '#2B2B2B',
   tertiary: '#FEFEFE',
   accent: '#FFB000',
+  smooth: '#7F7F7F',
   transparent: '#00000000',
   neutral: {
     _00: '#FFFFFF',
@@ -30,6 +31,11 @@ export const colors = {
     },
     g3: {
       colors: ['#2B2B2B', '#2B2B2B'],
+    },
+    g4: {
+      start: { x: 0, y: 0 },
+      end: { x: 0, y: 1 },
+      colors: ['#00000000', '#000000EE'],
     },
   },
 };

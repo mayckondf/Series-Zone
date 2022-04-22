@@ -8,6 +8,12 @@
   "i18n-ally.localesPaths": [
     "src/languages/locales"
   ],
-  "cSpell.words": [],
+  "cSpell.words": [
+    "dayjs",
+    "imdb",
+    "previousepisode",
+    "thetvdb",
+    "tvrage"
+  ],
   "cSpell.language": "en,pt_BR",
 }
