@@ -1,3 +1,5 @@
+import 'react-native-reanimated';
+
 import '@src/languages';
 import '@src/config/reactotron';
 import React from 'react';
