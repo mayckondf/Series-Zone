@@ -4,11 +4,6 @@ import { MotiView } from 'moti';
 import { Platform } from 'react-native';
 import styled from 'styled-components/native';
 
-export const StatusBar = styled.StatusBar.attrs<{ dark: boolean }>(props => ({
-  backgroundColor: 'transparent',
-  barStyle: props.dark ? 'dark-content' : 'light-content',
-}))<{ dark: boolean }>``;
-
 export const KeyboardView = styled.KeyboardAvoidingView.attrs({
   behavior: Platform.OS === 'ios' ? 'padding' : 'height',
 })`

@@ -5,6 +5,7 @@ import Button from '@src/components/Button';
 import Flex from '@src/components/Flex';
 import Icon from '@src/components/Icon';
 import { InputGradient } from '@src/components/Inputs';
+import StatusBar from '@src/components/StatusBar';
 import Text from '@src/components/Text';
 import useKeyboard from '@src/hooks/useKeyboard';
 import { useAnimationState } from 'moti';
@@ -17,7 +18,6 @@ import {
   CenterView,
   Container,
   KeyboardView,
-  StatusBar,
   Subtitle,
   Title,
 } from './styles';
@@ -56,7 +56,7 @@ const SignUpView: React.FC<SignUpViewProps> = ({
 
   return (
     <Container>
-      <StatusBar dark={!isKeyboardVisible} translucent />
+      <StatusBar dark={!isKeyboardVisible} />
       <AnimatedBackground state={animationState}>
         <KeyboardView>
           <Flex flex={12} />
