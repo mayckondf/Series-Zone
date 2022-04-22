@@ -7,8 +7,9 @@ export const Container = styled(MotiPressable)`
   justify-content: center;
 `;
 
-export const ButtonContent = styled.View`
-  background-color: ${({ theme }) => theme.colors.accent};
+export const ButtonContent = styled.View<{ disabled: boolean }>`
+  background-color: ${({ theme, disabled }) =>
+    disabled ? theme.colors.neutral._30 : theme.colors.accent};
   justify-content: center;
   align-items: center;
   border-radius: 8px;

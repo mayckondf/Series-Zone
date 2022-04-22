@@ -6,11 +6,16 @@ import Text from '../Text';
 import { Container, ButtonContent } from './styles';
 import { ButtonProps } from './types';
 
-const Button: React.FC<ButtonProps> = ({ children, onPress }) => {
+const Button: React.FC<ButtonProps> = ({
+  children,
+  disabled = false,
+  onPress,
+}) => {
   const { colors } = useTheme();
 
   return (
     <Container
+      disabled={disabled}
       onPress={onPress}
       animate={useMemo(
         () =>
@@ -23,7 +28,7 @@ const Button: React.FC<ButtonProps> = ({ children, onPress }) => {
         [],
       )}
     >
-      <ButtonContent>
+      <ButtonContent disabled={disabled}>
         {!!children && (
           <Text fontStyle="h5" color={colors.secondary}>
             {children}
