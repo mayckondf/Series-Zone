@@ -6,7 +6,7 @@ import styled from 'styled-components/native';
 import { CoreTextProps } from './types';
 
 const fontStyles: { [index: string]: { size: number; font: string } } = {
-  h1: { size: sizes.fontSizes.h1, font: fonts.Regular },
+  h1: { size: sizes.fontSizes.h1, font: fonts.Black },
   h2: { size: sizes.fontSizes.h2, font: fonts.SemiBold },
   h3: { size: sizes.fontSizes.h3, font: fonts.Regular },
   h4: { size: sizes.fontSizes.h4, font: fonts.Regular },
