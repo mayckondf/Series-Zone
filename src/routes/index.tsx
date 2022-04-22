@@ -5,10 +5,12 @@ import {
   NavigationContainer,
 } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from '@src/pages/Home';
+import Show from '@src/pages/Show';
 import SignIn from '@src/pages/SignIn';
 import SignUp from '@src/pages/SignUp';
+import { useAppSelector } from '@src/redux/hooks';
 
+import TabRoutes from './tabRoutes';
 import { RootStackParamList } from './types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -16,15 +18,18 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 export const navigationRef = createNavigationContainerRef();
 
 const Routes: React.FC = () => {
+  const { users } = useAppSelector(state => state.auth);
+
   return (
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator
         screenOptions={{ headerShown: false }}
-        initialRouteName={'SignUp'}
+        initialRouteName={users.length ? 'Signed' : 'SignUp'}
       >
-        <Stack.Screen name={'SignIn'} component={SignIn} />
-        <Stack.Screen name={'Home'} component={Home} />
         <Stack.Screen name={'SignUp'} component={SignUp} />
+        <Stack.Screen name={'SignIn'} component={SignIn} />
+        <Stack.Screen name={'Signed'} component={TabRoutes} />
+        <Stack.Screen name={'Show'} component={Show} />
       </Stack.Navigator>
     </NavigationContainer>
   );
