@@ -7,7 +7,7 @@ const persistReducers = (reducers: Reducer<any>) => {
     {
       key: 'Series Zone',
       storage: AsyncStorage,
-      whitelist: ['auth', 'preferences'],
+      whitelist: ['auth', 'preferences', 'favorites'],
     },
     reducers,
   );

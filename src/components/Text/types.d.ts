@@ -8,4 +8,5 @@ export interface CoreTextProps extends TextProps {
   fontStyle: FontStyle;
   marginBottom?: number;
   marginTop?: number;
+  textAlign?: 'center' | 'left' | 'right';
 }

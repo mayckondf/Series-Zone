@@ -27,4 +27,5 @@ export const StyledText = styled(Text)<CoreTextProps>`
   color: ${({ theme, color }) => color || theme.colors.neutral._00};
   margin-bottom: ${({ marginBottom }) => marginBottom || 0}px;
   margin-top: ${({ marginTop }) => marginTop || 0}px;
+  text-align: ${({ textAlign }) => textAlign || 'left'};
 `;

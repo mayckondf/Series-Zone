@@ -37,6 +37,10 @@
     "SEARCH": {
       "PLACEHOLDER": "Search by name",
       "TITLE": "Explore"
+    },
+    "FAVORITES": {
+      "TITLE": "Favorites",
+      "EMPTY_DESCRIPTION": "Find for your favorite series and favorite it to see its here"
     }
   }
 }
