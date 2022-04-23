@@ -14,3 +14,12 @@ export type ShowsStore = {
   currentPage: number;
   shows: Show[];
 };
+
+export type FavoritesStore = {
+  userFavorites: { [key: string]: Show[] };
+};
+
+export type AddFavoritePayload = {
+  show: Show;
+  user: User;
+};

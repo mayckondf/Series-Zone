@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { User } from '@src/types/app/User';
+import dayjs from 'dayjs';
 
 import { AuthStore } from '../types';
 
@@ -12,8 +13,9 @@ export const authSlice = createSlice({
   initialState: initialState,
   reducers: {
     registerUser: (state, action: PayloadAction<User>) => {
-      state.users.push(action.payload);
-      state.currentUser = action.payload;
+      const user = { ...action.payload, id: `${dayjs().unix()}` };
+      state.users.push(user);
+      state.currentUser = user;
     },
   },
 });

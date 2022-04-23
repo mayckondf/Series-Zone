@@ -15,7 +15,7 @@ export const colors = {
   },
   feedback: {
     positive: '#',
-    negative: '#',
+    negative: '#F04955',
     warning: '#',
   },
   gradients: {
@@ -36,6 +36,11 @@ export const colors = {
       start: { x: 0, y: 0 },
       end: { x: 0, y: 1 },
       colors: ['#00000000', '#000000EE'],
+    },
+    g5: {
+      start: { x: 0, y: 0 },
+      end: { x: 0, y: 1 },
+      colors: ['#302F3600', '#302F36'],
     },
   },
 };

@@ -16,6 +16,19 @@
     "COUNTRY": "US",
     "HOME": {
       "TITLE": "All Shows"
+    },
+    "SHOW": {
+      "SEASON_TITLE": "Season {{number}}",
+      "FAVORITE_BUTTON": {
+        "ADD": "Add to favorites",
+        "REMOVE": "Remove from favorites"
+      },
+      "RUNTIME": "Run time: {{runtime}}",
+      "GENRES": "Genres: ",
+      "STATUS": {
+        "NOT_RUNNING": "Status: Not running ",
+        "RUNNING": "Status: on air at {{time}} every "
+      }
     }
   }
 }

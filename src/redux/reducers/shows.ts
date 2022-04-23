@@ -8,7 +8,7 @@ const initialState: ShowsStore = {
   shows: [],
 };
 
-export const authSlice = createSlice({
+export const showsSlice = createSlice({
   name: 'shows',
   initialState: initialState,
   reducers: {
@@ -20,6 +20,6 @@ export const authSlice = createSlice({
   },
 });
 
-export const { addShows } = authSlice.actions;
+export const { addShows } = showsSlice.actions;
 
-export default authSlice.reducer;
+export default showsSlice.reducer;
