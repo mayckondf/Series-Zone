@@ -4,6 +4,7 @@ import Home from './home.svg';
 import Logo from './logo.svg';
 import LogoStroke from './logoStroke.svg';
 import Search from './search.svg';
+import Users from './users.svg';
 
 export const svgs = {
   logo: Logo,
@@ -12,4 +13,5 @@ export const svgs = {
   favorite: Favorite,
   arrowLeft: ArrowLeft,
   logoStroke: LogoStroke,
+  users: Users,
 };

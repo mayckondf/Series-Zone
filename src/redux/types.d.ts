@@ -6,6 +6,10 @@ export type AuthStore = {
   users: User[];
 };
 
+export type UserPayload = {
+  nickname: User['nickname'];
+};
+
 export type PreferencesStore = {
   language: string;
 };

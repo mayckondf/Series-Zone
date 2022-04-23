@@ -1,16 +1,41 @@
-import React from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect } from 'react';
 
-import Icon from '@src/components/Icon';
-import Text from '@src/components/Text';
+import { useNavigation } from '@react-navigation/native';
+import { useAppSelector } from '@src/redux/hooks';
+import { login } from '@src/redux/reducers/auth';
+import { User } from '@src/types/app/User';
+import { useDispatch } from 'react-redux';
 
-import { Container } from './styles';
+import SignInView from './view';
 
 const SignIn: React.FC = () => {
+  const { users, currentUser } = useAppSelector(state => state.auth);
+  const navigation = useNavigation();
+  const dispatch = useDispatch();
+
+  const handleUser = (user: User) => {
+    dispatch(login(user));
+  };
+
+  const handleCreateUser = () => {
+    navigation.navigate('SignUp');
+  };
+
+  useEffect(() => {
+    if (currentUser)
+      navigation.reset({
+        index: 1,
+        routes: [{ name: 'Signed' }],
+      });
+  }, [currentUser]);
+
   return (
-    <Container>
-      <Icon variant="logo" size="xxl" />
-      <Text fontStyle="h1">Series Zone</Text>
-    </Container>
+    <SignInView
+      users={users}
+      handleUser={handleUser}
+      handleCreateUser={handleCreateUser}
+    />
   );
 };
 

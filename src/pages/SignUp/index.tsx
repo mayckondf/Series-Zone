@@ -31,7 +31,11 @@ const SignUp: React.FC = () => {
   }, [nickname]);
 
   useEffect(() => {
-    if (currentUser) navigation.navigate('Signed');
+    if (currentUser)
+      navigation.reset({
+        index: 1,
+        routes: [{ name: 'Signed' }],
+      });
   }, [currentUser]);
 
   return (

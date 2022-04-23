@@ -41,6 +41,16 @@
     "FAVORITES": {
       "TITLE": "Favorites",
       "EMPTY_DESCRIPTION": "Find for your favorite series and favorite it to see its here"
+    },
+    "PROFILE": {
+      "USER_ID": "   #{{id}}",
+      "USER_SINCE": "created: ",
+      "LOGOUT": "Logout",
+      "FAVORITES": "Favorites",
+      "VIEWED_SHOWS": "Shows Viewed"
+    },
+    "SIGN_IN": {
+      "CREATE_USER": "Create user"
     }
   }
 }

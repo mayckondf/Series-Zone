@@ -19,13 +19,19 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 export const navigationRef = createNavigationContainerRef();
 
 const Routes: React.FC = () => {
-  const { users } = useAppSelector(state => state.auth);
+  const { currentUser, users } = useAppSelector(state => state.auth);
+
+  const getInitialRoute: () => keyof RootStackParamList = () => {
+    if (!users.length) return 'SignUp';
+    if (currentUser) return 'Signed';
+    return 'SignIn';
+  };
 
   return (
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator
         screenOptions={{ headerShown: false }}
-        initialRouteName={users.length ? 'Signed' : 'SignUp'}
+        initialRouteName={getInitialRoute()}
       >
         <Stack.Screen name={'SignUp'} component={SignUp} />
         <Stack.Screen name={'SignIn'} component={SignIn} />
