@@ -1,4 +1,4 @@
-import { MotiPressable } from 'moti/interactions';
+import { TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 
 import { BackgroundSelector, ContainerProps } from './types';
@@ -8,7 +8,7 @@ const getBackgroundColor = ({ disabled, color, theme }: BackgroundSelector) => {
   return color ? color : theme.colors.accent;
 };
 
-export const Container = styled(MotiPressable)<ContainerProps>`
+export const Container = styled(TouchableOpacity)<ContainerProps>`
   height: 48px;
   width: 100%;
   justify-content: center;

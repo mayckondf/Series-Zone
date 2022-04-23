@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 
 import { useTheme } from 'styled-components';
 
@@ -16,21 +16,7 @@ const Button: React.FC<ButtonProps> = ({
   const { colors } = useTheme();
 
   return (
-    <Container
-      {...props}
-      disabled={disabled}
-      onPress={onPress}
-      animate={useMemo(
-        () =>
-          ({ hovered, pressed }) => {
-            'worklet';
-            return {
-              scale: hovered || pressed ? 0.96 : 1,
-            };
-          },
-        [],
-      )}
-    >
+    <Container {...props} disabled={disabled} onPress={onPress}>
       <ButtonContent disabled={disabled} color={color}>
         {!!children && (
           <Text fontStyle="h5" color={colors.secondary}>

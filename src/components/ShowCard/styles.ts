@@ -1,11 +1,11 @@
 import { LinearGradient } from 'expo-linear-gradient';
-import { MotiPressable } from 'moti/interactions';
+import { TouchableOpacity } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import styled from 'styled-components/native';
 
 import Text from '../Text';
 
-export const Container = styled(MotiPressable)`
+export const Container = styled(TouchableOpacity)`
   justify-content: center;
 `;
 

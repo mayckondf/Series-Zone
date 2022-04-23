@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 
 import {
   CardContainer,
@@ -13,19 +13,7 @@ const ShowCard: React.FC<ShowCardProps> = ({ onPress, show }) => {
   const { image, name } = show;
 
   return (
-    <Container
-      onPress={onPress}
-      animate={useMemo(
-        () =>
-          ({ pressed }) => {
-            'worklet';
-            return {
-              scale: pressed ? 0.9 : 1,
-            };
-          },
-        [],
-      )}
-    >
+    <Container onPress={onPress}>
       <CardContainer>
         <Poster source={{ uri: image?.medium }} />
         <StyledName fontStyle="b1" numberOfLines={2}>
