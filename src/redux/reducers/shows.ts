@@ -15,7 +15,6 @@ export const showsSlice = createSlice({
     addShows: (state, action: PayloadAction<Show[]>) => {
       state.currentPage += 1;
       state.shows = [...state.shows, ...action.payload];
-      return state;
     },
   },
 });

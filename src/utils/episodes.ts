@@ -7,11 +7,11 @@ export const generateSectionedEpisodesList: (
 ) => EpisodeSectionList = episodes => {
   let seasons: number[] = [];
   episodes.forEach(episode => {
-    seasons = [...new Set([...seasons, episode.season])];
+    seasons = [...new Set([...seasons, episode?.season])];
   });
 
   return seasons.map(season => ({
     title: i18n.t('SHOW.SEASON_TITLE', { number: season }),
-    data: episodes.filter(episode => episode.season === season),
+    data: episodes.filter(episode => episode?.season === season),
   }));
 };

@@ -41,7 +41,7 @@ const ShowPage: React.FC = () => {
   };
 
   useEffect(() => {
-    fetchShowEpisodes({ showId: show.id }).then(_episodes =>
+    fetchShowEpisodes({ showId: show?.id }).then(_episodes =>
       setEpisodes(generateSectionedEpisodesList(_episodes)),
     );
   }, [show]);
@@ -49,7 +49,7 @@ const ShowPage: React.FC = () => {
   useEffect(() => {
     if (userFavorites[currentUser?.id!]) {
       setAlreadyFavorite(
-        !!userFavorites[currentUser?.id!].find(_show => _show.id === show.id),
+        !!userFavorites[currentUser?.id!].find(_show => _show?.id === show?.id),
       );
     }
   }, [userFavorites[currentUser?.id!]]);

@@ -32,16 +32,16 @@ const EpisodeView: React.FC<EpisodeProps> = ({ episode }) => {
             <Icon variant="arrowLeft" size="sm" color={colors.secondary} />
           </BackButton>
           <Text fontStyle="h2" marginBottom={24}>
-            {episode.name}
+            {episode?.name}
           </Text>
           <Text fontStyle="h4" marginBottom={24}>
-            {removeTagsFromText(episode.summary)}
+            {removeTagsFromText(episode?.summary)}
           </Text>
           <Text fontStyle="b2">
-            {t('EPISODE.SEASON', { number: episode.season })}
+            {t('EPISODE.SEASON', { number: episode?.season })}
           </Text>
           <Text fontStyle="b2" marginBottom={24}>
-            {t('EPISODE.NUMBER', { number: episode.number })}
+            {t('EPISODE.NUMBER', { number: episode?.number })}
           </Text>
         </PaddingContent>
         {!!episode?.image?.original && (

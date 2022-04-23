@@ -17,6 +17,7 @@ export const CardContainer = styled.View`
   overflow: hidden;
   margin-right: 12px;
   justify-content: center;
+  background-color: ${({ theme }) => theme.colors.secondary};
 `;
 
 export const Poster = styled(FastImage)`

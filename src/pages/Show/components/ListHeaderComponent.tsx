@@ -24,19 +24,19 @@ const ListHeaderComponent: React.FC<ListHeaderProps> = ({
   const { t } = useTranslation();
 
   const getDateAndTimes = () => {
-    if (show.status !== 'Running') {
+    if (show?.status !== 'Running') {
       return t('SHOW.STATUS.NOT_RUNNING');
     }
     return (
-      t('SHOW.STATUS.RUNNING', { time: show.schedule.time }) +
-      show.schedule.days.join(', ')
+      t('SHOW.STATUS.RUNNING', { time: show?.schedule?.time }) +
+      show?.schedule?.days?.join(', ')
     );
   };
 
   return (
     <HeaderContent>
       <ImageContainer>
-        <BackgroundImage source={{ uri: show.image.original }} />
+        <BackgroundImage source={{ uri: show?.image?.original }} />
         <GradientOverlay />
       </ImageContainer>
       <Content>
@@ -50,13 +50,13 @@ const ListHeaderComponent: React.FC<ListHeaderProps> = ({
             : t('SHOW.FAVORITE_BUTTON.ADD')}
         </Button>
         <Text fontStyle="h2" marginBottom={12}>
-          {show.name}
+          {show?.name}
         </Text>
         <Text fontStyle="b1" color={colors.smooth} marginBottom={24}>
-          {removeTagsFromText(show.summary)}
+          {removeTagsFromText(show?.summary)}
         </Text>
         <Text fontStyle="b3">
-          {t('SHOW.GENRES') + show.genres.filter(genre => genre).join(',')}
+          {t('SHOW.GENRES') + show?.genres?.filter(genre => genre).join(',')}
         </Text>
         <Text fontStyle="b3">{getDateAndTimes()}</Text>
       </Content>
