@@ -25,4 +25,6 @@ export const StyledText = styled(Text)<CoreTextProps>`
   font-size: ${({ fontStyle }) => fontStyles[fontStyle!].size}px;
   font-family: ${({ fontStyle }) => fontStyles[fontStyle!].font};
   color: ${({ theme, color }) => color || theme.colors.neutral._00};
+  margin-bottom: ${({ marginBottom }) => marginBottom || 0}px;
+  margin-top: ${({ marginTop }) => marginTop || 0}px;
 `;
