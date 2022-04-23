@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
 
-import { Keyboard } from 'react-native';
+import { Keyboard, Platform } from 'react-native';
 
 type Config = {
   useWillShow: boolean;
@@ -13,8 +13,11 @@ type HookReturn = [boolean, () => void];
 export default (config?: Config): HookReturn => {
   const { useWillShow = false, useWillHide = false } = config || {};
   const [visible, setVisible] = useState(false);
-  const showEvent = useWillShow ? 'keyboardWillShow' : 'keyboardDidShow';
-  const hideEvent = useWillHide ? 'keyboardWillHide' : 'keyboardDidHide';
+  const isApple = Platform.OS === 'ios';
+  const showEvent =
+    useWillShow && isApple ? 'keyboardWillShow' : 'keyboardDidShow';
+  const hideEvent =
+    useWillHide && isApple ? 'keyboardWillHide' : 'keyboardDidHide';
 
   function dismiss() {
     Keyboard.dismiss();
