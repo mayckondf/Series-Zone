@@ -1,6 +1,7 @@
 import { WithSafeArea } from '@src/types/app/SafeAreaElement';
 import { LinearGradient } from 'expo-linear-gradient';
 import { StyleSheet } from 'react-native';
+import FastImage from 'react-native-fast-image';
 import { EdgeInsets } from 'react-native-safe-area-context';
 import styled from 'styled-components/native';
 
@@ -34,7 +35,7 @@ export const ImageContainer = styled.View`
   width: 100%;
 `;
 
-export const BackgroundImage = styled.Image`
+export const BackgroundImage = styled(FastImage)`
   flex: 1;
   background-color: ${({ theme }) => theme.colors.secondary};
 `;

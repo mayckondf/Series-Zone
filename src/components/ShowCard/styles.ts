@@ -1,5 +1,6 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { MotiPressable } from 'moti/interactions';
+import FastImage from 'react-native-fast-image';
 import styled from 'styled-components/native';
 
 import Text from '../Text';
@@ -18,7 +19,7 @@ export const CardContainer = styled.View`
   justify-content: center;
 `;
 
-export const Poster = styled.Image`
+export const Poster = styled(FastImage)`
   flex: 1;
 `;
 

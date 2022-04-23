@@ -1,4 +1,5 @@
 import { WithSafeArea } from '@src/types/app/SafeAreaElement';
+import FastImage from 'react-native-fast-image';
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
@@ -16,7 +17,7 @@ export const StyledScrollView = styled.ScrollView.attrs<WithSafeArea>(
   }),
 )<WithSafeArea>``;
 
-export const EpisodeImage = styled.Image`
+export const EpisodeImage = styled(FastImage)`
   width: 100%;
   height: 230px;
 `;
