@@ -57,10 +57,10 @@
     "SIGN_UP": {
       "BUTTON": "Continuar",
       "INPUT": {
-        "PLACEHOLDER": "Como podemos chamar para você? \ndigite aqui."
+        "PLACEHOLDER": "Como podemos chamar para você? digite aqui."
       },
       "SUBTITLE": "Vamos criar uma conta para você acompanhar suas séries favoritas.",
-      "TITLE": "Vamos começar! \n👋"
+      "TITLE": "Vamos começar! 👋"
     },
     "SLOGAN": "Não perca nada sobre sua série favorita."
   }

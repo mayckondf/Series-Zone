@@ -5,6 +5,7 @@ import Button from '@src/components/Button';
 import Flex from '@src/components/Flex';
 import Icon from '@src/components/Icon';
 import { InputGradient } from '@src/components/Inputs';
+import LanguageSelector from '@src/components/LanguageSelector';
 import StatusBar from '@src/components/StatusBar';
 import Text from '@src/components/Text';
 import useKeyboard from '@src/hooks/useKeyboard';
@@ -96,6 +97,7 @@ const SignUpView: React.FC<SignUpViewProps> = ({
             </>
           )}
         </KeyboardView>
+        <LanguageSelector />
       </AnimatedBackground>
     </Container>
   );
