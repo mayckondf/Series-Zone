@@ -5,6 +5,7 @@ import {
   NavigationContainer,
 } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Episode from '@src/pages/Episode';
 import Show from '@src/pages/Show';
 import SignIn from '@src/pages/SignIn';
 import SignUp from '@src/pages/SignUp';
@@ -30,6 +31,7 @@ const Routes: React.FC = () => {
         <Stack.Screen name={'SignIn'} component={SignIn} />
         <Stack.Screen name={'Signed'} component={TabRoutes} />
         <Stack.Screen name={'Show'} component={Show} />
+        <Stack.Screen name={'Episode'} component={Episode} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,3 +1,4 @@
+import { Episode } from '@src/types/app/Episode';
 import { Show } from '@src/types/app/Show';
 
 export type RootStackParamList = {
@@ -8,4 +9,5 @@ export type RootStackParamList = {
   Search: undefined;
   Favorites: undefined;
   Show: { show: Show };
+  Episode: { episode: Episode };
 };
