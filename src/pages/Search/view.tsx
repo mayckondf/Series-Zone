@@ -5,7 +5,9 @@ import ShowCard from '@src/components/ShowCard';
 import TabPageContainer from '@src/components/TabPageContainer';
 import Text from '@src/components/Text';
 import { ShowResult } from '@src/types/app/Show';
+import { isOdd } from '@src/utils/number';
 import LottieView from 'lottie-react-native';
+import { useTranslation } from 'react-i18next';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import SearchHeader from './components/SearchHeader';
@@ -18,13 +20,14 @@ const SearchView: React.FC<SearchProps> = ({
   onItemPress,
 }) => {
   const insets = useSafeAreaInsets();
+  const { t } = useTranslation();
 
   const renderItem = useCallback(
     ({ item, index }: { item: ShowResult; index: number }) => {
       return (
         <>
           <ShowCard show={item.show} onPress={() => onItemPress(item.show)} />
-          {index % 2 === 0 && <Flex />}
+          {isOdd(index) && <Flex />}
         </>
       );
     },
@@ -41,8 +44,8 @@ const SearchView: React.FC<SearchProps> = ({
         ListHeaderComponent={<SearchHeader searchState={searchState} />}
         ListEmptyComponent={
           <CenterView>
-            <Text fontStyle="h2" style={{ textAlign: 'center' }}>
-              Search for your favorite series
+            <Text fontStyle="h2" textAlign="center">
+              {t('SEARCH.EMPTY_CONTENT_TITLE')}
             </Text>
             <AnimationContainer>
               <LottieView

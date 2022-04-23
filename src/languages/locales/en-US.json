@@ -36,7 +36,8 @@
     },
     "SEARCH": {
       "PLACEHOLDER": "Search by name",
-      "TITLE": "Explore"
+      "TITLE": "Explore",
+      "EMPTY_CONTENT_TITLE": "Search for your favorite series"
     },
     "FAVORITES": {
       "TITLE": "Favorites",

@@ -32,7 +32,7 @@ export const Container = styled(LinearGradient).attrs(({ theme }) => ({
 }))<WithSafeArea>`
   flex: 1;
   justify-content: center;
-  padding-horizontal: 12px;
+  padding: 0px 12px;
   padding-bottom: ${({ safeAreaInsets }) => safeAreaInsets.bottom}px;
 `;
 
