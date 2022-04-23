@@ -23,11 +23,12 @@ const SignIn: React.FC = () => {
   };
 
   useEffect(() => {
-    if (currentUser)
+    if (currentUser) {
       navigation.reset({
         index: 1,
-        routes: [{ name: 'Signed' }],
+        routes: [{ name: currentUser?.hasPassCode ? 'Lock' : 'Signed' }],
       });
+    }
   }, [currentUser]);
 
   return (

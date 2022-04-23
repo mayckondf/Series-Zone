@@ -17,9 +17,17 @@ export const authSlice = createSlice({
         ...action.payload,
         id: `${dayjs().unix()}`,
         createdAt: dayjs().toISOString(),
+        hasPassCode: false,
+        enabledBiometric: false,
       };
       state.users.push(user);
       state.currentUser = user;
+    },
+    updateUser: (state, action: PayloadAction<User>) => {
+      state.currentUser = action.payload;
+      state.users = state.users.map(user =>
+        user.id === action.payload.id ? action.payload : user,
+      );
     },
     logout: state => {
       delete state.currentUser;
@@ -30,6 +38,6 @@ export const authSlice = createSlice({
   },
 });
 
-export const { registerUser, logout, login } = authSlice.actions;
+export const { registerUser, updateUser, logout, login } = authSlice.actions;
 
 export default authSlice.reducer;

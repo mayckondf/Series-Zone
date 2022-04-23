@@ -6,6 +6,7 @@ import {
 } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Episode from '@src/pages/Episode';
+import Lock from '@src/pages/Lock';
 import Show from '@src/pages/Show';
 import SignIn from '@src/pages/SignIn';
 import SignUp from '@src/pages/SignUp';
@@ -23,6 +24,7 @@ const Routes: React.FC = () => {
 
   const getInitialRoute: () => keyof RootStackParamList = () => {
     if (!users.length) return 'SignUp';
+    if (currentUser && currentUser?.hasPassCode) return 'Lock';
     if (currentUser) return 'Signed';
     return 'SignIn';
   };
@@ -38,6 +40,7 @@ const Routes: React.FC = () => {
         <Stack.Screen name={'Signed'} component={TabRoutes} />
         <Stack.Screen name={'Show'} component={Show} />
         <Stack.Screen name={'Episode'} component={Episode} />
+        <Stack.Screen name={'Lock'} component={Lock} />
       </Stack.Navigator>
     </NavigationContainer>
   );

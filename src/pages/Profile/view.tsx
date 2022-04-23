@@ -7,16 +7,17 @@ import TabPageContainer from '@src/components/TabPageContainer';
 import Text from '@src/components/Text';
 import dayjs from 'dayjs';
 import { useTranslation } from 'react-i18next';
-import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from 'styled-components';
 
 import {
+  ButtonLockAccount,
   HorizontalRow,
   Info,
   InfoContainer,
   LogoWrapper,
   ScrollView,
+  UserInfo,
 } from './styles';
 import { ProfileViewProps } from './types';
 
@@ -24,6 +25,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({
   currentUser,
   handleLogout,
   favoritesCount,
+  handleLockAccount,
 }) => {
   const insets = useSafeAreaInsets();
   const { colors } = useTheme();
@@ -36,7 +38,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({
           <LogoWrapper>
             <Icon variant="logo" size="lg" />
           </LogoWrapper>
-          <View>
+          <UserInfo>
             <Text fontStyle="h4">
               {currentUser?.nickname}
               <Text fontStyle="b1" color={colors.smooth}>
@@ -47,7 +49,14 @@ const ProfileView: React.FC<ProfileViewProps> = ({
               {t('PROFILE.USER_SINCE') +
                 dayjs(currentUser?.createdAt).format('DD/MM/YYYY')}
             </Text>
-          </View>
+          </UserInfo>
+          <ButtonLockAccount onPress={handleLockAccount}>
+            <Icon
+              variant={currentUser?.hasPassCode ? 'unlock' : 'lock'}
+              color={colors.secondary}
+              size="sm"
+            />
+          </ButtonLockAccount>
         </HorizontalRow>
         <InfoContainer>
           <Info hasMargin>

@@ -12,6 +12,19 @@ export const ScrollView = styled.ScrollView.attrs<WithSafeArea>(
   }),
 )<WithSafeArea>``;
 
+export const UserInfo = styled.View`
+  flex: 1;
+`;
+
+export const ButtonLockAccount = styled.TouchableOpacity`
+  height: 48px;
+  width: 48px;
+  background-color: ${({ theme }) => theme.colors.accent};
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const HorizontalRow = styled.View`
   flex-direction: row;
   align-items: center;

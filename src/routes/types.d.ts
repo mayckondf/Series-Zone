@@ -11,4 +11,5 @@ export type RootStackParamList = {
   Show: { show: Show };
   Episode: { episode: Episode };
   Profile: undefined;
+  Lock?: { createPassCode: boolean };
 };

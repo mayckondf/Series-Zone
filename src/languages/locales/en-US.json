@@ -47,10 +47,21 @@
       "USER_SINCE": "created: ",
       "LOGOUT": "Logout",
       "FAVORITES": "Favorites",
-      "VIEWED_SHOWS": "Shows Viewed"
+      "VIEWED_SHOWS": "Shows Viewed",
+      "DISABLE_PASS_CODE": {
+        "TITLE": "Remove passcode",
+        "DESCRIPTION": "Do you want remove your passcode?"
+      }
     },
     "SIGN_IN": {
       "CREATE_USER": "Create user"
+    },
+    "LOCK": {
+      "TITLE": "Type a passcode",
+      "PASS_CODE_CONFIRM": "Confirm your passcode",
+      "ACCOUNT_LOCKED": "Account bloked, try again in {{value}}",
+      "WRONG_CODE": "Wrong code!",
+      "CREATE_PASS_CODE": "Create your passcode"
     }
   }
 }
