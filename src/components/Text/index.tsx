@@ -6,7 +6,7 @@ import { StyledText } from './styles';
 import { CoreTextProps } from './types';
 
 const Text = React.forwardRef<RNText, CoreTextProps>(
-  ({ fontStyle, ...props }, ref) => {
+  ({ fontStyle = 'b1', ...props }, ref) => {
     return <StyledText ref={ref} fontStyle={fontStyle} {...props} />;
   },
 );

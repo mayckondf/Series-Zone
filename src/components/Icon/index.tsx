@@ -6,7 +6,12 @@ import { useTheme } from 'styled-components';
 import { ICON_SIZES } from './styles';
 import { IconProps } from './types';
 
-const Icon: React.FC<IconProps> = ({ variant, size, color, ...props }) => {
+const Icon: React.FC<IconProps> = ({
+  variant = 'home',
+  size = 'sm',
+  color,
+  ...props
+}) => {
   const Component = svgs[variant];
   const { colors } = useTheme();
 
