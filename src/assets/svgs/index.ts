@@ -1,3 +1,4 @@
+import ArrowLeft from './arrowLeft.svg';
 import Favorite from './favorite.svg';
 import Home from './home.svg';
 import Logo from './logo.svg';
@@ -8,4 +9,5 @@ export const svgs = {
   home: Home,
   search: Search,
   favorite: Favorite,
+  arrowLeft: ArrowLeft,
 };

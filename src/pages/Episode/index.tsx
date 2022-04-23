@@ -1,9 +1,15 @@
 import React from 'react';
 
-import { View } from 'react-native';
+import { RouteProp, useRoute } from '@react-navigation/native';
+import { RootStackParamList } from '@src/routes/types';
+
+import EpisodeView from './view';
 
 const EpisodePage: React.FC = () => {
-  return <View />;
+  const { params } = useRoute<RouteProp<RootStackParamList, 'Episode'>>();
+  const { episode } = params;
+
+  return <EpisodeView episode={episode} />;
 };
 
 export default EpisodePage;

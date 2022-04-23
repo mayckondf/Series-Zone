@@ -36,6 +36,7 @@ export const ImageContainer = styled.View`
 
 export const BackgroundImage = styled.Image`
   flex: 1;
+  background-color: ${({ theme }) => theme.colors.secondary};
 `;
 
 export const Content = styled.View`

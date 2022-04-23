@@ -29,6 +29,10 @@
         "NOT_RUNNING": "Status: Not running ",
         "RUNNING": "Status: on air at {{time}} every "
       }
+    },
+    "EPISODE": {
+      "NUMBER": "Episode number: {{number}}",
+      "SEASON": "Season: {{number}}"
     }
   }
 }
