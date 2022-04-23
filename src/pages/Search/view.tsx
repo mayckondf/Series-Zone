@@ -4,7 +4,7 @@ import Flex from '@src/components/Flex';
 import ShowCard from '@src/components/ShowCard';
 import TabPageContainer from '@src/components/TabPageContainer';
 import Text from '@src/components/Text';
-import { Show, ShowResult } from '@src/types/app/Show';
+import { ShowResult } from '@src/types/app/Show';
 import LottieView from 'lottie-react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
