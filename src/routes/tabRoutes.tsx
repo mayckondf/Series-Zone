@@ -4,6 +4,7 @@ import Icon from '@src/components/Icon';
 import StatusBar from '@src/components/StatusBar';
 import Favorites from '@src/pages/Favorites';
 import Home from '@src/pages/Home';
+import Profile from '@src/pages/Profile';
 import Search from '@src/pages/Search';
 import {
   AnimatedTabBarNavigator,
@@ -66,6 +67,19 @@ const TabRoutes: React.FC = () => {
             tabBarIcon: ({ focused }: { focused: boolean }) => (
               <Icon
                 variant="favorite"
+                size="sm"
+                color={focused ? colors.secondary : colors.tertiary}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Profile"
+          component={Profile}
+          options={{
+            tabBarIcon: ({ focused }: { focused: boolean }) => (
+              <Icon
+                variant="logoStroke"
                 size="sm"
                 color={focused ? colors.secondary : colors.tertiary}
               />

@@ -10,4 +10,5 @@ export type RootStackParamList = {
   Favorites: undefined;
   Show: { show: Show };
   Episode: { episode: Episode };
+  Profile: undefined;
 };
