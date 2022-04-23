@@ -1,2 +1,3 @@
 export const INITIAL_LANGUAGE = 'en-us';
 export const NICKNAME_MIN_LENGTH = 3;
+export const DEBOUNCE_DEFAULT_TIME_IN_MILLISECONDS = 1500;
