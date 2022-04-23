@@ -33,6 +33,10 @@
     "EPISODE": {
       "NUMBER": "Episode number: {{number}}",
       "SEASON": "Season: {{number}}"
+    },
+    "SEARCH": {
+      "PLACEHOLDER": "Search by name",
+      "TITLE": "Explore"
     }
   }
 }

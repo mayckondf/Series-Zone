@@ -7,10 +7,11 @@ export const colors = {
   transparent: '#00000000',
   neutral: {
     _00: '#FFFFFF',
-    _10: '#E9E9E9',
+    _10: '#E6E6E6',
     _20: '#D4D4D4',
     _30: '#CDCDCD',
     _40: '#FEFEFE3D',
+    _70: '#25252B',
     _99: '#000000',
   },
   feedback: {

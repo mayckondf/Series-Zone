@@ -2,6 +2,7 @@ import React from 'react';
 
 import Icon from '@src/components/Icon';
 import StatusBar from '@src/components/StatusBar';
+import Favorites from '@src/pages/Favorites';
 import Home from '@src/pages/Home';
 import Search from '@src/pages/Search';
 import {
@@ -60,7 +61,7 @@ const TabRoutes: React.FC = () => {
         />
         <Tab.Screen
           name="Favorites"
-          component={Search}
+          component={Favorites}
           options={{
             tabBarIcon: ({ focused }: { focused: boolean }) => (
               <Icon

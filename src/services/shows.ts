@@ -20,3 +20,8 @@ export const fetchShowsLaunchingToday = async () => {
   const response = await api.get(`/shows?date=${today}`);
   return response.data;
 };
+
+export const fetchFindShows = async ({ search = '' }: { search: string }) => {
+  const response = await api.get(`/search/shows?q=${search}`);
+  return response.data;
+};

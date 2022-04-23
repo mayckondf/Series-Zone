@@ -52,4 +52,9 @@ export type Show = {
   };
 };
 
+export type ShowResult = {
+  score: number;
+  show: Show;
+};
+
 export type ShowsByCategory = { [key: string]: Show[] };

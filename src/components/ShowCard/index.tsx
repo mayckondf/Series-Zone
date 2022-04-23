@@ -27,7 +27,7 @@ const ShowCard: React.FC<ShowCardProps> = ({ onPress, show }) => {
       )}
     >
       <CardContainer>
-        <Poster source={{ uri: image.medium }} />
+        <Poster source={{ uri: image?.medium }} />
         <StyledName fontStyle="b1" numberOfLines={2}>
           {name}
         </StyledName>

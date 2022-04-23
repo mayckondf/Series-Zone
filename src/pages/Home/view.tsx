@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 
 import Flex from '@src/components/Flex';
 import ShowCard from '@src/components/ShowCard';
@@ -22,6 +22,19 @@ const HomeView: React.FC<HomeViewProps> = ({
   const { colors } = useTheme();
   const { t } = useTranslation();
 
+  const renderItem = useCallback(
+    ({ item, index }: { item: Show; index: number }) => {
+      return (
+        <>
+          {index % 2 === 0 && <Flex />}
+          <ShowCard show={item} onPress={() => onItemPress(item)} />
+          <Flex />
+        </>
+      );
+    },
+    [onItemPress],
+  );
+
   return (
     <TabPageContainer>
       <StyledFlatList<React.ElementType>
@@ -29,13 +42,7 @@ const HomeView: React.FC<HomeViewProps> = ({
         numColumns={2}
         keyExtractor={(item: Show) => item.id}
         onEndReached={loadMoreShows}
-        renderItem={({ item, index }: { item: Show; index: number }) => (
-          <>
-            {index % 2 === 0 && <Flex />}
-            <ShowCard show={item} onPress={() => onItemPress(item)} />
-            <Flex />
-          </>
-        )}
+        renderItem={renderItem}
         ListHeaderComponent={() => (
           <Header>
             <Text fontStyle="h1" color={colors.accent}>
