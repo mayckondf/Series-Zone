@@ -1,8 +1,67 @@
 {
-  "error": {
-  },
+  "error": {},
   "translation": {
     "REGION": "BR",
-    "REGION_MASK": "pt-BR"
+    "REGION_MASK": "pt-BR",
+    "APP_NAME": "Series Zone",
+    "COUNTRY": "BR",
+    "EPISODE": {
+      "NUMBER": "Número do episódio: {{number}}",
+      "SEASON": "Temporada: {{number}}"
+    },
+    "FAVORITES": {
+      "EMPTY_DESCRIPTION": "Encontre sua série favorita e favorite-a para vê-la aqui",
+      "TITLE": "Favoritos"
+    },
+    "HOME": {
+      "TITLE": "Todos os programas"
+    },
+    "LOCK": {
+      "ACCOUNT_LOCKED": "Conta bloqueada, tente novamente em {{value}}",
+      "CREATE_PASS_CODE": "Crie sua senha",
+      "PASS_CODE_CONFIRM": "Confirme sua senha",
+      "TITLE": "Digite uma senha",
+      "WRONG_CODE": "Código errado!"
+    },
+    "PROFILE": {
+      "DISABLE_PASS_CODE": {
+        "DESCRIPTION": "Deseja remover sua senha?",
+        "TITLE": "Remover senha"
+      },
+      "FAVORITES": "Favoritos",
+      "LOGOUT": "Sair",
+      "USER_SINCE": "criado:",
+      "VIEWED_SHOWS": "Programas visualizados"
+    },
+    "SEARCH": {
+      "EMPTY_CONTENT_TITLE": "Procure sua série favorita",
+      "PLACEHOLDER": "Procura por nome",
+      "TITLE": "Explorar"
+    },
+    "SHOW": {
+      "FAVORITE_BUTTON": {
+        "ADD": "Adicionar aos favoritos",
+        "REMOVE": "Remover dos favoritos"
+      },
+      "GENRES": "Gêneros:",
+      "RUNTIME": "Tempo de execução: {{runtime}}",
+      "SEASON_TITLE": "Temporada {{number}}",
+      "STATUS": {
+        "NOT_RUNNING": "Situação: Finalizada",
+        "RUNNING": "Status: no ar às {{time}} todas as "
+      }
+    },
+    "SIGN_IN": {
+      "CREATE_USER": "Criar usuário"
+    },
+    "SIGN_UP": {
+      "BUTTON": "Continuar",
+      "INPUT": {
+        "PLACEHOLDER": "Como podemos chamar para você? \ndigite aqui."
+      },
+      "SUBTITLE": "Vamos criar uma conta para você acompanhar suas séries favoritas.",
+      "TITLE": "Vamos começar! \n👋"
+    },
+    "SLOGAN": "Não perca nada sobre sua série favorita."
   }
 }
