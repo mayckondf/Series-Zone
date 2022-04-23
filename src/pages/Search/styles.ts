@@ -5,6 +5,7 @@ export const StyledFlatList = styled.FlatList.attrs<WithSafeArea>(
   ({ safeAreaInsets }) => ({
     contentContainerStyle: {
       paddingTop: safeAreaInsets.top,
+      paddingBottom: 24,
       paddingHorizontal: 12,
       flexGrow: 1,
     },
@@ -25,4 +26,10 @@ export const CenterView = styled.View`
 export const AnimationContainer = styled.View`
   width: 300px;
   height: 300px;
+`;
+
+export const Header = styled.View`
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 `;

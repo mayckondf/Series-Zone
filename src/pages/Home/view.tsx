@@ -45,7 +45,7 @@ const HomeView: React.FC<HomeViewProps> = ({
         renderItem={renderItem}
         ListHeaderComponent={() => (
           <Header>
-            <Text fontStyle="h1" color={colors.accent}>
+            <Text fontStyle="h1" color={colors.neutral._20}>
               {t('HOME.TITLE')}
             </Text>
           </Header>
