@@ -10,11 +10,14 @@ const Button: React.FC<ButtonProps> = ({
   children,
   disabled = false,
   onPress,
+  color,
+  ...props
 }) => {
   const { colors } = useTheme();
 
   return (
     <Container
+      {...props}
       disabled={disabled}
       onPress={onPress}
       animate={useMemo(
@@ -28,7 +31,7 @@ const Button: React.FC<ButtonProps> = ({
         [],
       )}
     >
-      <ButtonContent disabled={disabled}>
+      <ButtonContent disabled={disabled} color={color}>
         {!!children && (
           <Text fontStyle="h5" color={colors.secondary}>
             {children}
