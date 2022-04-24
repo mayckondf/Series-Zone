@@ -55,4 +55,5 @@ As they recommend I will put above what I couldn't finish in this three days tha
 -   [ ] Setup husky to put commitlint rules.
 -   [ ] Setup git stash to validate the code before commit.
 -   [ ] Unitary tests.
+-   [ ] Add responsible aspect ratio to grant compatibility with low-res screen devices.
 
