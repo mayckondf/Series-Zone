@@ -1,5 +1,7 @@
 # Series Zone
 
+![Group 65](https://user-images.githubusercontent.com/43890876/164950986-380b6213-d623-4feb-a3c2-7a205cc30759.jpg)
+
 # About the project
 This project is an app of tv shows, like an Netflix but focused on series, in this app you can create your own account, favorite the series that you like and track the episodes of the series and more.
 
