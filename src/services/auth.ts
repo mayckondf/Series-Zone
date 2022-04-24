@@ -7,6 +7,5 @@ export const validateUserPassCode = async (user: User, passCode: string) => {
   if (result?.success && passCode.localeCompare(result?.value || '') === 0) {
     return true;
   }
-  console.log(result?.value);
   return false;
 };

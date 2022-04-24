@@ -30,8 +30,6 @@ const Search: React.FC = () => {
     }
   }, [search]);
 
-  console.tron.log(searchResult);
-
   return (
     <SearchView
       searchState={[search, setSearch]}
