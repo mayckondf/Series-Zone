@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { useAppSelector } from '@src/redux/hooks';
+import { addError } from '@src/redux/reducers/error';
 import {
   addToFavorites,
   removeFromFavorites,
@@ -11,6 +12,7 @@ import { RootStackParamList } from '@src/routes/types';
 import { fetchShowEpisodes } from '@src/services/episodes';
 import { Episode } from '@src/types/app/Episode';
 import { generateSectionedEpisodesList } from '@src/utils/episodes';
+import { generateError } from '@src/utils/error';
 import { useDispatch } from 'react-redux';
 
 import { EpisodeSectionList } from './types';
@@ -41,9 +43,9 @@ const ShowPage: React.FC = () => {
   };
 
   useEffect(() => {
-    fetchShowEpisodes({ showId: show?.id }).then(_episodes =>
-      setEpisodes(generateSectionedEpisodesList(_episodes)),
-    );
+    fetchShowEpisodes({ showId: show?.id })
+      .then(_episodes => setEpisodes(generateSectionedEpisodesList(_episodes)))
+      .catch(error => dispatch(addError(generateError(error, true))));
   }, [show]);
 
   useEffect(() => {

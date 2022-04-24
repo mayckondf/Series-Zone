@@ -1,3 +1,4 @@
+import { Error } from '@src/types/app/Error';
 import { Show } from '@src/types/app/Show';
 import { User } from '@src/types/app/User';
 
@@ -26,4 +27,8 @@ export type FavoritesStore = {
 export type AddFavoritePayload = {
   show: Show;
   user: User;
+};
+
+export type ErrorsStore = {
+  errors: Error[];
 };

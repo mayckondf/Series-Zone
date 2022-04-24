@@ -63,6 +63,11 @@
       "ACCOUNT_LOCKED": "Account bloked, try again in {{value}}",
       "WRONG_CODE": "Wrong code!",
       "CREATE_PASS_CODE": "Create your passcode"
+    },
+    "ERROR": {
+      "API_ERROR": "API Error.",
+      "GENERIC_ERROR": "Error",
+      "GENERIC_DESCRIPTION": "Something went wrong, please try again in a few minutes"
     }
   }
 }

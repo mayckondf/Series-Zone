@@ -8,6 +8,7 @@ import { LogBox } from 'react-native';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
+import ToastError from './components/ToastError';
 import store, { persist } from './redux/store';
 import Routes from './routes';
 import Theme from './theme';
@@ -19,6 +20,7 @@ const App: React.FC = () => {
     <Theme>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persist}>
+          <ToastError />
           <Routes />
         </PersistGate>
       </Provider>

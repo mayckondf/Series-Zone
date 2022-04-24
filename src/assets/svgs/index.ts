@@ -1,5 +1,6 @@
 import ArrowLeft from './arrowLeft.svg';
 import Brazil from './brazil.svg';
+import Close from './close.svg';
 import Delete from './delete.svg';
 import Favorite from './favorite.svg';
 import Home from './home.svg';
@@ -24,4 +25,5 @@ export const svgs = {
   delete: Delete,
   brazil: Brazil,
   unitedStates: UnitedStates,
+  close: Close,
 };
