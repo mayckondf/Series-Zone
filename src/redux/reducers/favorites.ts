@@ -16,6 +16,13 @@ export const favoritesSlice = createSlice({
         state.userFavorites[user.id!] = [];
       }
       state.userFavorites[user.id!].push(show);
+      state.userFavorites[user.id!] = state.userFavorites[user.id!].sort(
+        (a, b) => {
+          if (a.name < b.name) return -1;
+          if (a.name > b.name) return 1;
+          return 0;
+        },
+      );
     },
     removeFromFavorites: (state, action: PayloadAction<AddFavoritePayload>) => {
       const { show, user } = action.payload;
