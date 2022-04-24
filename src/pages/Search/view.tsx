@@ -26,8 +26,9 @@ const SearchView: React.FC<SearchProps> = ({
     ({ item, index }: { item: ShowResult; index: number }) => {
       return (
         <>
+          {!isOdd(index) && <Flex />}
           <ShowCard show={item.show} onPress={() => onItemPress(item.show)} />
-          {isOdd(index) && <Flex />}
+          <Flex />
         </>
       );
     },

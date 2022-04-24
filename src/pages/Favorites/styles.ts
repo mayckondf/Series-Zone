@@ -4,7 +4,8 @@ import styled from 'styled-components/native';
 export const StyledFlatList = styled.FlatList.attrs<WithSafeArea>(
   ({ safeAreaInsets }) => ({
     contentContainerStyle: {
-      paddingTop: safeAreaInsets.top || 20,
+      paddingTop: safeAreaInsets.top || 24,
+      paddingBottom: 24,
       flexGrow: 1,
     },
     columnWrapperStyle: {

@@ -15,7 +15,6 @@ export const CardContainer = styled.View`
   border-radius: 8px;
   border-radius: 12px;
   overflow: hidden;
-  margin-right: 12px;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.secondary};
 `;
